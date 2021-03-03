@@ -32,9 +32,43 @@
 
 </body>
 <style>
+body{
+    padding:0;
+    margin:0;
+}
     .cusom-login{
         height: 500px;
         padding-top: 100px;
+    }
+    .img-size{
+        height: 400px;
+        width: 100%;
+    }
+    .custom-product{
+        height: 500px;
+        padding-top: 100px;
+    }
+    .dtl{
+        background-color: #01f3f382;
+        width: 300px;
+        margin-top: -100px;
+        color:#fff;
+    }
+    .img-card{
+        height:150px;
+    }
+    .asd{
+        float: left;
+    }
+    .asd img{
+        margin:5px;
+    }
+    .asd:last-child(1){
+        float:none;
+    }
+    .prsize{
+        height:400px;
+        width: 500px;
     }
 </style>
 </html>
