@@ -35,7 +35,7 @@
     </ul>
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a class="nav-link" href="#">Add to Cart &nbsp; {{$total}}</a>
+        <a class="nav-link" href="/cartlist">Add to Cart &nbsp; {{$total}}</a>
       </li>
       @if(Session::has('user'))
       <li class="nav-item dropdown">

@@ -5,7 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Cart;
-
+use Session;
+use Illuminate\Support\Facades\DB;
 
 class ProductController extends Controller
 {
@@ -36,5 +37,21 @@ class ProductController extends Controller
         else{
             return redirect('/login');
         }
+    }
+    function cartlist()
+    {
+        $userId = Session::get('user')['id'];
+        $data = DB::table('cart')
+        ->join('products','cart.product_id','products.id')
+        ->select('products.*','cart.id as cart_id')
+        ->where('cart.user_id', $userId)
+        ->get();
+
+        return view('cartlist',['products'=>$data]);
+    }
+    function removecart($id)
+    {
+        Cart::destroy($id);
+        return redirect('cartlist');
     }
 }
