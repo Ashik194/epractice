@@ -3,6 +3,7 @@
 <div class="">
     <div class="">
             <div class="col-md-10">
+            <a href="/ordernow" class="btn btn-success">Order Now</a><br><br>
                 @foreach($products as $item)
                 <div class="col-md-3">
                     
